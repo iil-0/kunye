@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'app/routes.dart';
 import 'app/theme.dart';
+import 'widgets/ambient_layer.dart';
 
 void main() {
   runApp(const KunyeApp());
@@ -18,6 +19,8 @@ class KunyeApp extends StatelessWidget {
       theme: buildKunyeTheme(),
       initialRoute: AppRoutes.home,
       routes: AppRoutes.table,
+      // Gezgin kitap ve toz zerreleri tüm sayfaların üstünde yaşar.
+      builder: (context, child) => AmbientLayer(child: child!),
     );
   }
 }
