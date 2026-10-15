@@ -17,7 +17,7 @@ class KunyeApp extends StatelessWidget {
       title: 'Künye',
       debugShowCheckedModeBanner: false,
       theme: buildKunyeTheme(),
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.welcome,
       routes: AppRoutes.table,
       // Gezgin kitap ve toz zerreleri tüm sayfaların üstünde yaşar.
       builder: (context, child) => AmbientLayer(child: child!),
